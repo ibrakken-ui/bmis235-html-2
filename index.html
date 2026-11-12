@@ -9,6 +9,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="author" content="Indie Brakken">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>John Correia's Podcasts</title>
 
@@ -34,18 +35,25 @@ ul {
     text-align: center;
 }
 
-img {
+ul img {
+    width: 400px;
+    height: 400px;
     max-width: 100%;
-    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 .video {
     text-align: center;
-    margin: 20px 0;
+    margin: 20px auto 40px;
 }
 
-iframe {
+.video iframe {
+    width: 560px;
+    height: 315px;
     max-width: 100%;
+    border: 0;
 }
 
 #embed-block {
@@ -53,10 +61,24 @@ iframe {
     padding: 30px 20px 40px;
     text-align: center;
 }
+
+#embed-block iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 450px;
+    border: 0;
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+}
 </style>
 </head>
 
 <body>
+
+<!-- DARK MODE BUTTON -->
 
 <p style="text-align: center;">
 <button onclick="toggleDark()">Dark mode on / off</button>
@@ -67,7 +89,9 @@ iframe {
 <h1>Professor Correia's Podcasts</h1>
 
 <p style="text-align: center;">
-Email me at <a href="mailto:correia@gonzaga.edu">correia@gonzaga.edu</a> for episode suggestions
+Email me at
+<a href="mailto:correia@gonzaga.edu">correia@gonzaga.edu</a>
+for episode suggestions
 </p>
 
 <!-- MENU OF IMAGES -->
@@ -75,23 +99,41 @@ Email me at <a href="mailto:correia@gonzaga.edu">correia@gonzaga.edu</a> for epi
 <ul>
 
 <li><h2>For the Mind</h2></li>
+
 <li>
 <a href="#findingmastery">
-<img src="gervais.jpg" width="400" height="400" alt="Michael Gervais">
+<img
+src="gervais.jpg"
+width="400"
+height="400"
+alt="Michael Gervais"
+onerror="this.onerror=null; this.src='https://placehold.co/400x400?text=Michael+Gervais';">
 </a>
 </li>
 
 <li><h2>For the Body</h2></li>
+
 <li>
 <a href="#huberman">
-<img src="Huberman.jpg" width="400" height="400" alt="Andrew Huberman">
+<img
+src="Huberman.jpg"
+width="400"
+height="400"
+alt="Andrew Huberman"
+onerror="this.onerror=null; this.src='https://placehold.co/400x400?text=Andrew+Huberman';">
 </a>
 </li>
 
 <li><h2>For the Craft</h2></li>
+
 <li>
 <a href="#fridman">
-<img src="fridman.jpg" width="400" height="400" alt="Lex Fridman">
+<img
+src="fridman.jpg"
+width="400"
+height="400"
+alt="Lex Fridman"
+onerror="this.onerror=null; this.src='https://placehold.co/400x400?text=Lex+Fridman';">
 </a>
 </li>
 
@@ -99,50 +141,59 @@ Email me at <a href="mailto:correia@gonzaga.edu">correia@gonzaga.edu</a> for epi
 
 <!-- VIDEO SECTIONS -->
 
-<!-- MIND: Finding Mastery -->
+<!-- MIND: FINDING MASTERY -->
 
 <a id="findingmastery"></a>
 
 <h2>
-<a href="https://www.youtube.com/@FindingMastery">Finding Mastery</a>
+<a href="https://www.youtube.com/@FindingMastery">
+Finding Mastery
+</a>
 </h2>
 
 <div class="video">
-<iframe width="560" height="315"
+<iframe
 src="https://www.youtube.com/embed/4L98ssI5Vxw"
 title="Finding Mastery video"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen>
 </iframe>
 </div>
 
-<!-- BODY: Huberman Lab -->
+<!-- BODY: HUBERMAN LAB -->
 
 <a id="huberman"></a>
 
 <h2>
-<a href="https://www.youtube.com/@hubermanlab">Huberman Lab</a>
+<a href="https://www.youtube.com/@hubermanlab">
+Huberman Lab
+</a>
 </h2>
 
 <div class="video">
-<iframe width="560" height="315"
+<iframe
 src="https://www.youtube.com/embed/pq6WHJzOkno"
 title="Huberman Lab video"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen>
 </iframe>
 </div>
 
-<!-- CRAFT: Lex Fridman Podcast -->
+<!-- CRAFT: LEX FRIDMAN -->
 
 <a id="fridman"></a>
 
 <h2>
-<a href="https://www.youtube.com/@lexfridman">Lex Fridman Podcast</a>
+<a href="https://www.youtube.com/@lexfridman">
+Lex Fridman Podcast
+</a>
 </h2>
 
 <div class="video">
-<iframe width="560" height="315"
+<iframe
 src="https://www.youtube.com/embed/kFQUDCgMjRc"
 title="Lex Fridman Podcast video"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen>
 </iframe>
 </div>
@@ -151,13 +202,27 @@ allowfullscreen>
 <a href="#top">To top</a>
 </p>
 
-<!-- EMBED BLOCK -->
+<!-- GOOGLE MAP EMBED -->
 
 <section id="embed-block">
 
-<h2>My Google Map</h2>
+<h2>Gonzaga University - Spokane, Washington</h2>
 
-<!-- PASTE YOUR GOOGLE MAP EMBED CODE HERE -->
+<iframe
+src="https://www.google.com/maps?q=Gonzaga%20University,%20502%20E%20Boone%20Ave,%20Spokane,%20WA%2099258&output=embed"
+title="Google Map showing Gonzaga University in Spokane"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+<p>
+<a
+href="https://www.google.com/maps/search/?api=1&query=Gonzaga+University+502+E+Boone+Ave+Spokane+WA"
+target="_blank"
+rel="noopener noreferrer">
+Open Gonzaga University in Google Maps
+</a>
+</p>
 
 </section>
 
@@ -191,8 +256,10 @@ function paint() {
 }
 
 function toggleDark() {
+
     dark = !dark;
     paint();
+
 }
 
 paint();
